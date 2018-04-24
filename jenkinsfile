@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Build'){
 			steps {
-				sh '/apps/mvn/bin mvn package'
+				sh '/apps/mvn/bin/mvn package'
 //				build job: 'JenkinsClassMvnPackage'
 			}
 // 			post {
