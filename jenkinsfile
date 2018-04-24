@@ -3,6 +3,8 @@ pipeline {
 	stages {
 		stage('Build'){
 			steps {
+				echo $PATH
+				pwd
 				build job: 'JenkinsClassMvnPackage'
 			}
 // 			post {
