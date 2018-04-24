@@ -13,6 +13,12 @@ pipeline {
 //				}
 //			}
 		}
+//
+		stage('Policy Evaluation'){
+			steps {
+				nexusPolicyEvaluation iqApplication: 'JenkinsClassHello', iqStage: 'build'
+			}
+		}
 		stage ('Deploy to Staging') {
 			steps {
 				build job: 'JenkinsClassDeployToStage'
