@@ -3,9 +3,8 @@ pipeline {
 	stages {
 		stage('Build'){
 			steps {
-				bash 'echo $PATH'
-				sh 'echo $PATH'
-				build job: 'JenkinsClassMvnPackage'
+				sh '/apps/mvn/bin mvn package'
+//				build job: 'JenkinsClassMvnPackage'
 			}
 // 			post {
 //				success {
