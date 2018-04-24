@@ -16,8 +16,7 @@ pipeline {
 //
 		stage('Policy Evaluation'){
 			steps {
-				nexusPolicyEvaluation iqApplication: 'JenkinsClassHello', iqStage: 'build'
-			}
+				nexusPolicyEvaluation failBuildOnNetworkError: false, iqApplication: 'HelloWorld1', iqStage: 'build', jobCredentialsId: ''			}
 		}
 		stage ('Deploy to Staging') {
 			steps {
